@@ -1,3 +1,171 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: .6rem;
+    background: #828c87;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #474d4a;
+    border-radius: .5rem;
+}
+
+.overlay {
+    position: relative;
+}
+
+.overlay:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.overlay-9::before {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.overlay-8::before {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.overlay-7::before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.overlay-6::before {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.overlay-5::before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-4::before {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.overlay-3::before {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.overlay-2::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.overlay-1::before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.line-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.line-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.line-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.line-4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.line-5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.movie__item {
+    position: relative;
+}
+
+.movie__item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    border-left: 4px solid #DC2626;
+    transition: all .3s linear;
+}
+
+.movie__item:hover::after {
+    height: 100%;
+}
+
+.movie__item img {
+    transform: scale(100%);
+    transition: all .3s linear;
+}
+
+.movie__item:hover img {
+    transform: scale(105%);
+}
+
+.btn__primary {
+    position: relative;
+}
+
+.btn__primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all .2s linear;
+}
+
+.btn__primary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all .2s linear;
+}
+
+.btn__primary:hover::after,
+.btn__primary:hover::before {
+    width: 50%;
+}
+
+
+/*  style={{
+            backgroundImage:
+                `url(${background})`
+        }} */

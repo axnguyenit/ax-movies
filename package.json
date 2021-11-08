@@ -18,6 +18,7 @@
         "web-vitals": "^1.1.2"
     },
     "scripts": {
+        "beautiful": "prettier --single-quote --trailing-comma all --tab-width 4 --write src/**/*.{js,jsx}",
         "start": "craco start",
         "build": "craco build",
         "test": "craco test",
@@ -44,6 +45,7 @@
     "devDependencies": {
         "autoprefixer": "^9.8.8",
         "postcss": "^7.0.39",
+        "prettier": "^2.4.1",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
     }
 }
