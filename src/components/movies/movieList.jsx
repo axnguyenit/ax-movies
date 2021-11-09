@@ -45,7 +45,7 @@ const MovieList = (props) => {
         autoplay: true,
         autoplaySpeed: 5000,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         centerPadding: 0,
         swipeToSlide: true,
         pauseOnHover: true,
@@ -88,9 +88,6 @@ const MovieList = (props) => {
             } else {
                 response = await tmdbApi.similar(props.category, props.id);
             }
-            console.log('====================================');
-            console.log(response.results);
-            console.log('====================================');
             setMovies(response.results);
         };
         getList();

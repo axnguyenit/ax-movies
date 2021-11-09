@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import CatalogHeader from '../../components/header/catalogHeader';
+import { CatalogHeader } from '../../components/header';
 import { MovieGrid } from '../../components/movies';
 
 const Catalog = (props) => {
