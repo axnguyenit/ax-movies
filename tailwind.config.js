@@ -32,6 +32,7 @@ module.exports = {
             background: ['hover'],
             backgroundColor: ['hover'],
             border: ['hover'],
+            translate: ['group-hover'],
         },
     },
     plugins: [],

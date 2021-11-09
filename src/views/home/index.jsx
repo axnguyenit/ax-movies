@@ -7,7 +7,6 @@ import { category, movieType, tvType } from '../../api/tmdbApi';
 const Home = (props) => {
     return (
         <>
-            <Header />
             <Banner />
             <div className="w-11/12 mx-auto">
                 <MovieList

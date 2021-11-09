@@ -18,7 +18,7 @@ const nav = [
 ];
 
 const Header = (props) => {
-    const location = useLocation();
+    const { pathname } = useLocation();
     const headerRef = useRef(null);
 
     useEffect(() => {
@@ -45,7 +45,9 @@ const Header = (props) => {
         >
             <div className="flex items-center justify-between">
                 <div className="">
-                    <img src={logo} className="h-10 mt-3" alt="" />
+                    <Link to="/">
+                        <img src={logo} className="h-10 mt-3" alt="" />
+                    </Link>
                 </div>
 
                 <div>
@@ -55,7 +57,7 @@ const Header = (props) => {
                                 <Link
                                     to={item.path}
                                     className={`${
-                                        location.pathname === item.path
+                                        pathname === item.path
                                             ? 'text-red-600'
                                             : 'hover:text-red-600'
                                     } duration-300`}

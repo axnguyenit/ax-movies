@@ -5,6 +5,38 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import tmdbApi, { category, movieType, tvType } from '../../api/tmdbApi';
 
+const NextArrow = (props) => (
+    <div
+        onClick={props.onClick}
+        className="opacity-0 group-hover:opacity-100 absolute top-1/2 z-10 transform -translate-y-1/2 right-2.5 w-10 h-20 flex items-center justify-center cursor-pointer hover:opacity-70 duration-300 bg-penetration-5"
+    >
+        <svg
+            width="150"
+            height="150"
+            viewBox="0 0 24 24"
+            style={{ fill: '#d1d5db' }}
+        >
+            <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+        </svg>
+    </div>
+);
+
+const PrevArrow = (props) => (
+    <div
+        onClick={props.onClick}
+        className="opacity-0 group-hover:opacity-100 absolute top-1/2 z-10 transform -translate-y-1/2 left-2.5 w-10 h-20 flex items-center justify-center cursor-pointer hover:opacity-70 duration-300 bg-penetration-5"
+    >
+        <svg
+            width="150"
+            height="150"
+            viewBox="0 0 24 24"
+            style={{ fill: '#d1d5db' }}
+        >
+            <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+        </svg>
+    </div>
+);
+
 const MovieList = (props) => {
     const [movies, setMovies] = useState([]);
 
@@ -17,8 +49,8 @@ const MovieList = (props) => {
         centerPadding: 0,
         swipeToSlide: true,
         pauseOnHover: true,
-        // nextArrow: <NextArrow />,
-        // prevArrow: <PrevArrow />,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
     };
 
     useEffect(() => {
@@ -51,13 +83,14 @@ const MovieList = (props) => {
                                 params,
                             });
                         }
+                        break;
                 }
             } else {
                 response = await tmdbApi.similar(props.category, props.id);
             }
-            // console.log('====================================');
-            // console.log(response.results);
-            // console.log('====================================');
+            console.log('====================================');
+            console.log(response.results);
+            console.log('====================================');
             setMovies(response.results);
         };
         getList();
@@ -65,13 +98,17 @@ const MovieList = (props) => {
 
     return (
         <div className="py-5">
-            <h2 className="capitalize text-gray-300 text-3xl font-semibold tracking-wide">
+            <h2 className="capitalize px-3 text-gray-300 text-3xl font-semibold tracking-wide">
                 {props.title}
             </h2>
-            <Slider {...settings}>
-                {movies &&
-                    movies.map((item, i) => <MovieItem key={i} item={item} />)}
-            </Slider>
+            <div className="relative group">
+                <Slider {...settings}>
+                    {movies &&
+                        movies.map((item, i) => (
+                            <MovieItem key={i} item={item} />
+                        ))}
+                </Slider>
+            </div>
         </div>
     );
 };

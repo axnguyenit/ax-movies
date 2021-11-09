@@ -33,16 +33,32 @@ const BannerItem = ({ item }) => {
                         <div className="py-8 space-x-5 font-semibold tracking-wider uppercase">
                             <Link
                                 to="/"
-                                className="px-5 py-4 bg-red-600 btn__primary"
+                                className="px-5 py-4 inline-flex items-center bg-red-600 btn__primary space-x-3"
                             >
-                                Play now
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    style={{ fill: '#D1D5DB' }}
+                                >
+                                    <path d="M7 6v12l10-6z"></path>
+                                </svg>
+                                <span className="pt-0.5">Play now</span>
                             </Link>
 
                             <Link
                                 to="/"
-                                className="px-5 py-4 bg-blue-600 btn__primary"
+                                className="px-5 inline-flex items-center py-4 bg-blue-600 btn__primary space-x-3"
                             >
-                                View Info
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    style={{ fill: '#D1D5DB' }}
+                                >
+                                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
+                                </svg>
+                                <span className="pt-0.5">View Info</span>
                             </Link>
                         </div>
                     </div>

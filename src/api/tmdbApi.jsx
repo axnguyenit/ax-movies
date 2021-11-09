@@ -21,7 +21,7 @@ export const tvType = {
 
 const tmdbApi = {
     getTrendingList: (category, params) => {
-        const url = 'trending/' + category[category] + '/day';
+        const url = 'trending/' + category + '/day';
         return axiosClient.get(url, params);
     },
     getMoviesList: (type, params) => {

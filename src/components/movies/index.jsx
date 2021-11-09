@@ -1,3 +1,4 @@
 import MovieList from './movieList';
+import MovieGrid from './movieGrid';
 
-export { MovieList };
+export { MovieList, MovieGrid };

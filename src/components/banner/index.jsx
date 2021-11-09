@@ -20,6 +20,7 @@ const NextArrow = (props) => (
         </svg>
     </div>
 );
+
 const PrevArrow = (props) => (
     <div
         onClick={props.onClick}
@@ -37,7 +38,7 @@ const PrevArrow = (props) => (
 );
 
 const Banner = (props) => {
-    const [movieItems, setMovieItems] = useState([]);
+    const [movies, setMovies] = useState([]);
     const settings = {
         infinite: true,
         autoplay: true,
@@ -58,7 +59,7 @@ const Banner = (props) => {
                     movieType.popular,
                     { params },
                 );
-                setMovieItems(response.results.slice(1, 4));
+                setMovies(response.results.slice(1, 4));
             } catch {
                 console.log('error');
             }
@@ -68,7 +69,7 @@ const Banner = (props) => {
     return (
         <div className="mb-10 group">
             <Slider {...settings}>
-                {movieItems.map((item, i) => (
+                {movies.map((item, i) => (
                     <BannerItem key={i} item={item} />
                 ))}
             </Slider>
