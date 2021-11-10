@@ -8,7 +8,7 @@ const Home = (props) => {
     return (
         <>
             <Banner />
-            <div className="w-11/12 mx-auto">
+            <div className="w-full mt-812:w-11/12 mx-auto">
                 <MovieList
                     category={category.movie}
                     type={movieType.trending}

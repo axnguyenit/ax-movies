@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 const NextArrow = (props) => (
     <div
         onClick={props.onClick}
-        className="opacity-0 group-hover:opacity-100 absolute top-1/2 z-10 transform -translate-y-1/2 right-2 w-10 h-10 flex items-center justify-center rounded-full group cursor-pointer hover:opacity-70 duration-300"
+        className="mt-1024:opacity-0 group-hover:opacity-100 absolute top-1/2 z-10 transform -translate-y-1/2 right-2 w-10 h-10 flex items-center justify-center rounded-full group cursor-pointer hover:opacity-70 duration-300"
     >
         <svg
             width="150"
@@ -24,7 +24,7 @@ const NextArrow = (props) => (
 const PrevArrow = (props) => (
     <div
         onClick={props.onClick}
-        className="opacity-0 group-hover:opacity-100 absolute top-1/2 z-10 transform -translate-y-1/2 left-2 w-10 h-10 flex items-center justify-center rounded-full group cursor-pointer hover:opacity-70 duration-300"
+        className="mt-1024:opacity-0 group-hover:opacity-100 absolute top-1/2 z-10 transform -translate-y-1/2 left-2 w-10 h-10 flex items-center justify-center rounded-full group cursor-pointer hover:opacity-70 duration-300"
     >
         <svg
             width="150"

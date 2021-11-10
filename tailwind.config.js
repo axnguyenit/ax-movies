@@ -3,6 +3,16 @@ module.exports = {
     purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
     darkMode: false, // or 'media' or 'class'
     theme: {
+        screens: {
+            'mt-350': '350px',
+            'mt-414': '414px',
+            'mt-568': '568px',
+            'mt-812': '812px',
+            'mt-991': '991px',
+            'mt-1024': '1024px',
+            'mt-1280': '1280px',
+            '2xl': '1700px',
+        },
         extend: {
             backgroundColor: {
                 "penetration-1": "rgba(0, 0, 0, 0.1)",
@@ -23,6 +33,8 @@ module.exports = {
                 "banner": "700px",
                 "380": "380px",
                 "508": "508px",
+                "550": "550px",
+                "700": "700px",
             },
         },
     },

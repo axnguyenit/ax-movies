@@ -67,9 +67,9 @@ const MovieGrid = (props) => {
     };
 
     return (
-        <div className="w-11/12 mx-auto">
-            <div class="flex justify-end mr-3 mb-3 text-gray-500">
-                <div className="relative w-1/4">
+        <div className="w-full mt-812:w-11/12 mx-auto">
+            <div class="flex justify-end mr-3 mb-3 text-gray-500 pl-3">
+                <div className="relative w-full mt-568:w-1/2 mt-812:w-1/3 mt-1024:w-1/4">
                     <input
                         type="text"
                         class="p-2 pl-8 w-full border border-gray-300 bg-gray-300 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
@@ -92,7 +92,7 @@ const MovieGrid = (props) => {
                     </svg>
                 </div>
             </div>
-            <div className="grid grid-cols-4 gap-0 min-h-screen">
+            <div className="grid grid-cols-1 mt-568:grid-cols-2 mt-812:grid-cols-3 mt-1024:grid-cols-4 gap-0 min-h-screen">
                 {items &&
                     items.map((item, i) => <MovieItem key={i} item={item} />)}
             </div>

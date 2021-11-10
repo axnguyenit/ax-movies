@@ -9,7 +9,7 @@ const BannerItem = ({ item }) => {
 
     return (
         <div
-            className="relative h-banner bg-cover bg-center bg-no-repeat"
+            className="relative h-508 mt-812:h-700 bg-cover bg-center bg-no-repeat"
             style={{
                 backgroundImage: `url(${background})`,
             }}
@@ -17,8 +17,8 @@ const BannerItem = ({ item }) => {
             <div className="absolute top-0 left-0 w-full h-full overlay overlay-7" />
             <div className="absolute top-0 left-0 w-full mt-16">
                 <div className="mx-10 h-full flex">
-                    <div className="w-1/2 block my-auto h-full text-gray-300 space-y-3">
-                        <h2 className="text-5xl font-bold tracking-wide lg:leading-tight line-2 uppercase">
+                    <div className="w-full mt-812:w-1/2 block my-auto h-full text-gray-300 space-y-3">
+                        <h2 className="text-4xl mt-812:text-5xl font-bold tracking-wide lg:leading-tight line-2 uppercase">
                             {item.title}
                         </h2>
                         <div className="text-base mb-10 mt-2 line-2 space-x-4">
@@ -30,12 +30,13 @@ const BannerItem = ({ item }) => {
                         <p className="line-5 text-lg leading-7">
                             {item.overview}
                         </p>
-                        <div className="py-8 space-x-5 font-semibold tracking-wider uppercase">
+                        <div className="py-8 flex justify-between font-semibold tracking-wider uppercase">
                             <Link
                                 to="/"
-                                className="px-5 py-4 inline-flex items-center bg-red-600 btn__primary space-x-3"
+                                className="px-3 mt-350:px-2 py-2 mt-414:px-5 mt-414:py-4 inline-flex items-center bg-red-600 btn__primary mt-350:space-x-3"
                             >
                                 <svg
+                                    className="hidden mt-350:block"
                                     width="20"
                                     height="20"
                                     viewBox="0 0 24 24"
@@ -48,9 +49,10 @@ const BannerItem = ({ item }) => {
 
                             <Link
                                 to="/"
-                                className="px-5 inline-flex items-center py-4 bg-blue-600 btn__primary space-x-3"
+                                className="px-3 mt-350:px-2 py-2 mt-414:px-5 mt-414:py-4 inline-flex items-center bg-blue-600 btn__primary mt-350:space-x-3"
                             >
                                 <svg
+                                    className="hidden mt-350:block"
                                     width="20"
                                     height="20"
                                     viewBox="0 0 24 24"
@@ -62,7 +64,7 @@ const BannerItem = ({ item }) => {
                             </Link>
                         </div>
                     </div>
-                    <div className="block mx-auto my-auto py-16">
+                    <div className="hidden mt-812:block mx-auto my-auto py-16">
                         <img
                             src={apiConfig.w500Image(item.poster_path)}
                             className="h-380 w-auto object-cover my-auto"

@@ -43,7 +43,7 @@ const Header = () => {
             className="h-16 px-10 max-w-screen-2xl w-screen fixed top-0 z-30 duration-300"
         >
             <div className="flex items-center justify-between">
-                <Logo height="h-10"/>
+                <Logo height="h-10" />
                 <div>
                     <ul className="text-gray-300 font-semibold uppercase space-x-10 mt-3">
                         {nav.map((item, i) => (
