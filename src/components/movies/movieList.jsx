@@ -52,7 +52,7 @@ const MovieList = (props) => {
         prevArrow: <PrevArrow />,
         responsive: [
             {
-                breakpoint: 1025,
+                breakpoint: 1280,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,

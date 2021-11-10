@@ -30,7 +30,7 @@ const BannerItem = ({ item }) => {
                         <p className="line-5 text-lg leading-7">
                             {item.overview}
                         </p>
-                        <div className="py-8 flex justify-between font-semibold tracking-wider uppercase">
+                        <div className="py-8 flex justify-between mt-414:justify-start mt-414:space-x-5 font-semibold tracking-wider uppercase">
                             <Link
                                 to="/"
                                 className="px-3 mt-350:px-2 py-2 mt-414:px-5 mt-414:py-4 inline-flex items-center bg-red-600 btn__primary mt-350:space-x-3"
