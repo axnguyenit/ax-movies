@@ -8,7 +8,7 @@ import tmdbApi, { category, movieType, tvType } from '../../api/tmdbApi';
 const NextArrow = (props) => (
     <div
         onClick={props.onClick}
-        className="mt-1024:opacity-0 group-hover:opacity-100 absolute top-1/2 z-10 transform -translate-y-1/2 right-3 w-10 h-20 flex items-center justify-center cursor-pointer hover:opacity-70 duration-300 bg-penetration-5"
+        className="mt-1024:opacity-0 group-hover:opacity-100 absolute top-1/2 z-10 transform -translate-y-1/2 right-2.5 w-10 h-20 flex items-center justify-center cursor-pointer hover:opacity-70 duration-300 bg-penetration-5"
     >
         <svg
             width="150"
@@ -42,7 +42,7 @@ const MovieList = (props) => {
 
     const settings = {
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         slidesToShow: 4,
         slidesToScroll: 4,
         centerPadding: 0,
@@ -113,7 +113,7 @@ const MovieList = (props) => {
             setMovies(response.results);
         };
         getList();
-    }, []);
+    }, [props.id]);
 
     return (
         <div className="py-5">
@@ -124,7 +124,11 @@ const MovieList = (props) => {
                 <Slider {...settings}>
                     {movies &&
                         movies.map((item, i) => (
-                            <MovieItem key={i} item={item} />
+                            <MovieItem
+                                key={i}
+                                item={item}
+                                category={props.category}
+                            />
                         ))}
                 </Slider>
             </div>

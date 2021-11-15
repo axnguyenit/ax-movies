@@ -22,7 +22,7 @@ const Header = () => {
     const headerRef = useRef(null);
 
     useEffect(() => {
-        const shrinkHeader = () => {
+        const fixedHeader = () => {
             if (
                 document.body.scrollTop > 64 ||
                 document.documentElement.scrollTop > 64
@@ -32,9 +32,9 @@ const Header = () => {
                 headerRef.current.classList.remove('bg-penetration-8');
             }
         };
-        window.addEventListener('scroll', shrinkHeader);
+        window.addEventListener('scroll', fixedHeader);
         return () => {
-            window.removeEventListener('scroll', shrinkHeader);
+            window.removeEventListener('scroll', fixedHeader);
         };
     }, []);
     return (

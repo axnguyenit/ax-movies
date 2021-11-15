@@ -1,21 +1,28 @@
 import { useEffect } from 'react';
+import { useParams } from 'react-router';
 import { useLocation } from 'react-router-dom';
 import { CatalogHeader } from '../../components/header';
 import { MovieGrid } from '../../components/movies';
+import handleScrollToTop from '../../components/scrollToTop';
 
 const Catalog = (props) => {
-    const { pathname } = useLocation();
+    const { category } = useParams();
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
+        if (category === 'movies') {
+            document.title = 'Movies - Ax Nguyen';
+        } else {
+            document.title = 'TV Shows - Ax Nguyen';
+        }
+        handleScrollToTop();
+    }, [category]);
 
     return (
         <div>
             <CatalogHeader
-                category={pathname === '/movies' ? 'Movies' : 'TV Shows'}
+                category={category === 'movies' ? 'Movies' : 'TV Shows'}
             />
-            <MovieGrid category={pathname === '/movies' ? 'movie' : 'tv'} />
+            <MovieGrid category={category === 'movies' ? 'movie' : 'tv'} />
         </div>
     );
 };

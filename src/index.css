@@ -14,7 +14,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: #474d4a;
-    border-radius: .5rem;
 }
 
 .overlay {
@@ -183,6 +182,24 @@ body {
 .header__catalog::after {
     background-image: linear-gradient(to top, #262626, rgba(0, 0, 0, .7));
 }
+
+.bg__play {
+    position: relative;
+}
+
+.bg__play::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, .8);
+    z-index: 0;
+}
+
+
+/* FOOTER */
 
 .footer::after {
     background-image: linear-gradient(to bottom, #262626, rgba(0, 0, 0, .8));

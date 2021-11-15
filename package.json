@@ -1,5 +1,5 @@
 {
-    "name": "d-movies",
+    "name": "ax-movies",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -22,8 +22,7 @@
         "start": "craco start",
         "build": "craco build",
         "test": "craco test",
-        "eject": "react-scripts eject",
-        "prepare": "husky install"
+        "eject": "react-scripts eject"
     },
     "eslintConfig": {
         "extends": [
@@ -45,7 +44,6 @@
     },
     "devDependencies": {
         "autoprefixer": "^9.8.8",
-        "husky": "^7.0.0",
         "postcss": "^7.0.39",
         "prettier": "^2.4.1",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"

@@ -94,7 +94,13 @@ const MovieGrid = (props) => {
             </div>
             <div className="grid grid-cols-1 mt-568:grid-cols-2 mt-812:grid-cols-3 mt-1280:grid-cols-4 gap-0 min-h-screen">
                 {items &&
-                    items.map((item, i) => <MovieItem key={i} item={item} />)}
+                    items.map((item, i) => (
+                        <MovieItem
+                            key={i}
+                            item={item}
+                            category={props.category}
+                        />
+                    ))}
             </div>
 
             {page < totalPage && (

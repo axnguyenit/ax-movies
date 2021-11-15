@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../../components/banner';
 import Header from '../../components/header';
 import { MovieList } from '../../components/movies';
 import { category, movieType, tvType } from '../../api/tmdbApi';
 
 const Home = (props) => {
+    useEffect(() => {
+        document.title = 'Home - Ax Nguyen';
+    }, []);
     return (
         <>
             <Banner />
