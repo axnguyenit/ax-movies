@@ -1,8 +1,8 @@
 # Movies Website
 
-## Reference Materials:
+## Reference Materials
 [TMDB](https://www.themoviedb.org/).
-[Iframe video](https://www.2embed.ru/).
+[Iframe Video](https://www.2embed.ru/).
 
 ## Project Using
 [ReactJS](https://github.com/facebook/create-react-app/).

@@ -227,3 +227,9 @@ body {
 .footer__social a:hover svg {
     fill: #DC2626;
 }
+
+@media (max-width: 567px) {
+    .header__moblie {
+        @apply absolute top-0 right-0 left-0 h-40 text-center bg-penetration-9 shadow-lg pt-7;
+    }
+}
