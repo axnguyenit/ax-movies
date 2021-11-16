@@ -43,14 +43,21 @@ const MovieList = (props) => {
     const settings = {
         infinite: true,
         autoplay: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 5,
+        slidesToScroll: 5,
         centerPadding: 0,
         swipeToSlide: true,
         pauseOnHover: true,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         responsive: [
+            {
+                breakpoint: 1700,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                },
+            },
             {
                 breakpoint: 1280,
                 settings: {

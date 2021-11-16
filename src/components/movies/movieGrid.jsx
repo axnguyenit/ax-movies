@@ -6,14 +6,15 @@ const MovieGrid = (props) => {
     const [items, setItems] = useState([]);
     const [items2, setItems2] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-
     const [page, setPage] = useState(1);
     const [totalPage, setTotalPage] = useState(0);
 
     useEffect(() => {
         const getList = async () => {
             let response = null;
-            const params = {};
+            const params = {
+                // page: 2
+            };
             switch (props.category) {
                 case category.movie:
                     response = await tmdbApi.getMoviesList(movieType.upcoming, {
@@ -72,7 +73,7 @@ const MovieGrid = (props) => {
                 <div className="relative w-full mt-568:w-1/2 mt-812:w-1/3 mt-1024:w-1/4">
                     <input
                         type="text"
-                        class="p-2 pl-8 w-full border border-gray-300 bg-gray-300 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        class="p-2 pl-8 w-full border border-gray-300 bg-gray-300 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent rounded-lg overflow-hidden"
                         placeholder="Search..."
                         value={searchTerm}
                         onChange={search}
@@ -92,7 +93,15 @@ const MovieGrid = (props) => {
                     </svg>
                 </div>
             </div>
-            <div className="grid grid-cols-1 mt-568:grid-cols-2 mt-812:grid-cols-3 mt-1280:grid-cols-4 gap-0 min-h-screen">
+            <div
+                id="movie__grid"
+                className="grid grid-cols-1 mt-568:grid-cols-2 mt-812:grid-cols-3 mt-1280:grid-cols-4 mt-1700:grid-cols-5 gap-0 min-h-full"
+                style={
+                    {
+                        // minHeight: 'calc(100vh - 1200px)'
+                    }
+                }
+            >
                 {items &&
                     items.map((item, i) => (
                         <MovieItem
@@ -103,7 +112,7 @@ const MovieGrid = (props) => {
                     ))}
             </div>
 
-            {page < totalPage && (
+            {page < totalPage && items && (
                 <div className="flex justify-center mt-3 mb-10">
                     <button
                         onClick={loadMore}

@@ -163,7 +163,14 @@ body {
     width: 50%;
 }
 
-.footer,
+.footer {
+    position: relative;
+    right: 0;
+    left: 0;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
 .header__catalog {
     position: relative;
 }

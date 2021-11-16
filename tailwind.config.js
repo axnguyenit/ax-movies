@@ -11,7 +11,8 @@ module.exports = {
             'mt-991': '991px',
             'mt-1024': '1024px',
             'mt-1280': '1280px',
-            '2xl': '1700px',
+            'mt-1700': '1700px',
+            '2xl': '2000px',
         },
         extend: {
             backgroundColor: {

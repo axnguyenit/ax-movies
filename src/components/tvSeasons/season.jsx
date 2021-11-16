@@ -38,7 +38,7 @@ const Season = (props) => {
         <div>
             <div
                 onClick={handleSeason}
-                className="relative flex text-gray-300 bg-penetration-7 group cursor-pointer group my-1"
+                className="relative flex text-gray-300 bg-penetration-7 group cursor-pointer group"
             >
                 <div className="overflow-hidden w-1/3">
                     <img

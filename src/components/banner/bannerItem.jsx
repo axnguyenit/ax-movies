@@ -33,7 +33,7 @@ const BannerItem = ({ item }) => {
                         <div className="py-8 flex justify-between mt-414:justify-start mt-414:space-x-5 font-semibold tracking-wider uppercase">
                             <Link
                                 to={`/movie/${item.id}/play`}
-                                className="px-3 mt-350:px-2 py-2 mt-414:px-5 mt-414:py-4 inline-flex items-center bg-red-600 btn__primary mt-350:space-x-3"
+                                className="px-3 mt-350:px-2 py-2 mt-414:px-5 mt-414:py-4 inline-flex items-center bg-red-600 btn__primary mt-350:space-x-3 rounded-lg shadow-lg overflow-hidden"
                             >
                                 <svg
                                     className="hidden mt-350:block"
@@ -49,7 +49,7 @@ const BannerItem = ({ item }) => {
 
                             <Link
                                 to="/"
-                                className="px-3 mt-350:px-2 py-2 mt-414:px-5 mt-414:py-4 inline-flex items-center bg-blue-600 btn__primary mt-350:space-x-3"
+                                className="px-3 mt-350:px-2 py-2 mt-414:px-5 mt-414:py-4 inline-flex items-center bg-blue-600 btn__primary mt-350:space-x-3 rounded-lg shadow-lg overflow-hidden"
                             >
                                 <svg
                                     className="hidden mt-350:block"
@@ -67,7 +67,7 @@ const BannerItem = ({ item }) => {
                     <div className="hidden mt-812:block mx-auto my-auto py-16">
                         <img
                             src={apiConfig.w500Image(item.poster_path)}
-                            className="h-380 w-auto object-cover my-auto"
+                            className="h-380 w-auto object-cover my-auto rounded-lg shadow-lg"
                             alt=""
                         />
                     </div>

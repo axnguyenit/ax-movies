@@ -67,7 +67,7 @@ const PlayMovie = (props) => {
 
     return (
         <div
-            className="bg__play w-full bg-cover bg-no-repeat bg-center pt-24 mt-812:pb-10"
+            className="bg__play w-full bg-cover bg-no-repeat bg-center pt-16 mt-812:pb-10"
             style={{
                 backgroundImage: `url(${apiConfig.originalImage(background)})`,
             }}
@@ -85,7 +85,7 @@ const PlayMovie = (props) => {
                                 ? 'Other Episodes'
                                 : 'Trending Movies'}
                         </div>
-                        <div className=" h-700 overflow-y-auto scroll__custom">
+                        <div className="h-700 overflow-y-auto overflow-hidden rounded-lg scroll__custom space-y-2">
                             {seasons &&
                                 seasons.map((season) => {
                                     return (

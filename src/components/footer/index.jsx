@@ -6,7 +6,7 @@ import background from '../../assets/images/background.jpg';
 const Footer = () => {
     return (
         <footer
-            className="footer mt-568:h-380 mt-812:h-60 h-700 bg-cover bg-bottom bg-no-repeat w-full text-gray-300 "
+            className="footer mt-568:h-380 mt-812:h-60 h-700 bg-cover bg-bottom bg-no-repeat text-gray-300"
             style={{ backgroundImage: `url(${background})` }}
         >
             <div className="absolute top-0 left-0 w-full h-full z-10 px-10">
