@@ -2,7 +2,7 @@ import React from 'react';
 
 import background from '../../assets/images/background.jpg';
 
-const CatalogHeader = (props) => {
+const CatalogBanner = (props) => {
     return (
         <div
             className="header__catalog mb-5 h-40 mt-568:h-56 mt-991:h-72 bg-cover bg-center bg-no-repeat w-full"
@@ -17,4 +17,4 @@ const CatalogHeader = (props) => {
     );
 };
 
-export default CatalogHeader;
+export default CatalogBanner;

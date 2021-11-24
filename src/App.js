@@ -4,6 +4,8 @@ import { Header } from './components/header';
 import Catalog from './views/catalog';
 import Footer from './components/footer';
 import PlayMovie from './views/playMovie';
+import { ScrollUp } from './components/scrollToTop';
+import MovieDetails from './views/movieDetails';
 
 function App() {
     return (
@@ -15,11 +17,16 @@ function App() {
                         <Routes>
                             <Route path="/:category" element={<Catalog />} />
                             <Route
+                                path="/:category/:id"
+                                element={<MovieDetails />}
+                            />
+                            <Route
                                 path="/:category/:id/play"
                                 element={<PlayMovie />}
                             />
                             <Route path="/" element={<Home />} />
                         </Routes>
+                        <ScrollUp />
                         <Footer />
                     </Router>
                 </div>

@@ -8,7 +8,7 @@ import { useParams } from 'react-router';
 const Season = (props) => {
     const episodeRef = useRef(null);
     const navigate = useNavigate();
-    const { season, handleUrl, poster, id, background } = props;
+    const { season, handleUrl, id, background } = props;
     const { category } = useParams();
     const [episodes, setEpisodes] = useState([]);
     const fetchEpisode = async () => {

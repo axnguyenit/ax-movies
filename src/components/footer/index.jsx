@@ -19,6 +19,7 @@ const Footer = () => {
                             <div className="flex space-x-4 footer__social">
                                 <a
                                     target="_blank"
+                                    rel="noopener"
                                     href="https://www.facebook.com/nguyendinhkha2k1"
                                     className="p-1 rounded-full"
                                 >
@@ -33,6 +34,7 @@ const Footer = () => {
                                 </a>
                                 <a
                                     target="_blank"
+                                    rel="noopener"
                                     href="https://github.com/khanguyen01it/"
                                     className="p-1 rounded-full"
                                 >
@@ -50,6 +52,7 @@ const Footer = () => {
                                 </a>
                                 <a
                                     target="_blank"
+                                    rel="noopener"
                                     href="https://www.instagram.com/nguyendinhkha2k1"
                                     className="p-1 rounded-full"
                                 >

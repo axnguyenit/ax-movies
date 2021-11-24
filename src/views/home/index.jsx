@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import Banner from '../../components/banner';
-import Header from '../../components/header';
+import { Banner } from '../../components/banner';
 import { MovieList } from '../../components/movies';
-import { category, movieType, tvType } from '../../api/tmdbApi';
+import { category, movieType } from '../../api/tmdbApi';
 
 const Home = (props) => {
     useEffect(() => {

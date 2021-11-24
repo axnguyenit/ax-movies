@@ -73,7 +73,7 @@ const MovieGrid = (props) => {
                 <div className="relative w-full mt-568:w-1/2 mt-812:w-1/3 mt-1024:w-1/4">
                     <input
                         type="text"
-                        class="p-2 pl-8 w-full border border-gray-300 bg-gray-300 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent rounded-lg overflow-hidden"
+                        class="p-2 pl-8 w-full border border-gray-300 bg-gray-300 focus:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent rounded overflow-hidden"
                         placeholder="Search..."
                         value={searchTerm}
                         onChange={search}

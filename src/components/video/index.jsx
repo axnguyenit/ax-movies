@@ -1,7 +1,7 @@
 const Video = ({ src }) => {
     return (
         <div
-            className="relative w-full duration-200 rounded-lg overflow-hidden"
+            className="relative w-full duration-200 rounded-md overflow-hidden"
             style={{ paddingBottom: '55%' }}
         >
             <iframe

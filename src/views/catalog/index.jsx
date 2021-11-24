@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router';
-import { useLocation } from 'react-router-dom';
-import { CatalogHeader } from '../../components/header';
+import { CatalogBanner } from '../../components/banner';
 import { MovieGrid } from '../../components/movies';
 import handleScrollToTop from '../../components/scrollToTop';
 
@@ -19,7 +18,7 @@ const Catalog = (props) => {
 
     return (
         <div>
-            <CatalogHeader
+            <CatalogBanner
                 category={category === 'movies' ? 'Movies' : 'TV Shows'}
             />
             <MovieGrid category={category === 'movies' ? 'movie' : 'tv'} />

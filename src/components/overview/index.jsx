@@ -27,11 +27,16 @@ const Overview = (props) => {
         }
         return stars;
     };
+
+    const path =
+        category === 'movie' ? `/movie/${overview.id}` : `/tv/${overview.id}`;
+    // const pathPlay = category === 'movie' ? `/movie/${overview.id}/play` : `/tv/${overview.id}/play`;
+
     return (
-        <div className="text-gray-300 relative z-10 space-y-2 pt-3">
+        <div className="text-gray-300 relative z-10 space-y-3 pt-3">
             <h1>
                 <Link
-                    to="/"
+                    to={path}
                     className="text-2xl hover:text-red-600 duration-150"
                 >
                     {title}
@@ -48,6 +53,14 @@ const Overview = (props) => {
                 {overview.first_air_date ||
                     overview.release_date ||
                     overview.air_date}
+            </div>
+            <div className="block space-x-3 py-2">
+                {overview.genres &&
+                    overview.genres.map((item) => (
+                        <span className="px-3 py-2 rounded-3xl border-2 border-gray-300 cursor-pointer hover:text-gray-400 hover:border-gray-400 duration-300">
+                            {item.name}
+                        </span>
+                    ))}
             </div>
             <div className="flex">
                 {handleRenderStar(overview.vote_average)}

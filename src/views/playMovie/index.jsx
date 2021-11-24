@@ -85,7 +85,7 @@ const PlayMovie = (props) => {
                                 ? 'Other Episodes'
                                 : 'Trending Movies'}
                         </div>
-                        <div className="h-700 overflow-y-auto overflow-hidden rounded-lg scroll__custom space-y-2">
+                        <div className="h-700 overflow-y-auto overflow-hidden rounded-md scroll__custom space-y-2">
                             {seasons &&
                                 seasons.map((season) => {
                                     return (
