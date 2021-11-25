@@ -29,11 +29,11 @@ const DetailsBanner = (props) => {
             style={{ backgroundImage: `url(${background})` }}
         >
             <div className="block w-11/12 mx-auto">
-                <div className="flex relative z-20 items-center mt-812:space-x-10">
-                    <div className="w-1/3 hidden mt-812:block">
+                <div className="flex mt-812:flex-row flex-col relative z-20 items-center mt-812:space-x-10">
+                    <div className="mt-812:w-1/3 block mt-414:hidden mt-812:block">
                         <img
                             src={poster}
-                            className="mt-1024:h-508 h-380 w-90 object-cover my-auto rounded-md shadow-lg"
+                            className="mt-1024:h-508 h-508 mt-414:h-380 w-90 object-cover my-auto rounded-md shadow-lg"
                             alt=""
                         />
                     </div>

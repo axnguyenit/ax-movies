@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import PlayMovie from './views/playMovie';
 import { ScrollUp } from './components/scrollToTop';
 import MovieDetails from './views/movieDetails';
+import ScrollIndicator from './components/scrollIndicator';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <div className="max-w-screen-2xl mx-auto">
                 <div className="relative min-h-screen">
                     <Router>
+                        <ScrollIndicator />
                         <Header />
                         <Routes>
                             <Route path="/:category" element={<Catalog />} />

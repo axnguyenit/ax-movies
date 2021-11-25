@@ -72,14 +72,30 @@ const Cast = () => {
 
     return (
         <div className="w-11/12 mx-auto">
-            <h2 className="capitalize px-3 text-gray-300 text-3xl font-semibold tracking-wide">
-                {`Cast (${cast.length})`}
-            </h2>
-            <div className="relative group">
-                <Slider {...settings}>
-                    {cast &&
-                        cast.map((item, i) => <CastItem key={i} cast={item} />)}
-                </Slider>
+            <div className="block -mx-3">
+                <h2 className="capitalize px-3 text-gray-300 mt-812:text-3xl text-2xl font-semibold tracking-wide">
+                    {`Cast (${cast.length})`}
+                </h2>
+                {cast && cast.length > 4 ? (
+                    <div className="relative group">
+                        <Slider {...settings}>
+                            {cast &&
+                                cast.map((item, i) => (
+                                    <CastItem key={i} cast={item} />
+                                ))}
+                        </Slider>
+                    </div>
+                ) : (
+                    <div
+                        id="movie__grid"
+                        className="grid grid-cols-1 mt-568:grid-cols-2 mt-812:grid-cols-3 mt-1280:grid-cols-4 mt-1700:grid-cols-5 gap-0 min-h-full"
+                    >
+                        {cast &&
+                            cast.map((item, i) => (
+                                <CastItem key={i} cast={item} />
+                            ))}
+                    </div>
+                )}
             </div>
         </div>
     );

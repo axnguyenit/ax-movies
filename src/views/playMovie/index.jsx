@@ -105,7 +105,7 @@ const PlayMovie = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="relative z-10">
+                <div className="relative z-10 -mx-3">
                     <MovieList
                         category={category}
                         type="similar"
@@ -114,7 +114,6 @@ const PlayMovie = (props) => {
                     />
                 </div>
             </div>
-            {/* </div> */}
         </div>
     );
 };

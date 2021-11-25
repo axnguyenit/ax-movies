@@ -94,7 +94,7 @@ const MovieList = (props) => {
 
     return (
         <div className="py-5">
-            <h2 className="capitalize px-3 text-gray-300 text-3xl font-semibold tracking-wide">
+            <h2 className="capitalize px-3 text-gray-300 mt-812:text-3xl text-2xl font-semibold tracking-wide">
                 {props.title}
             </h2>
             <div className="relative group">

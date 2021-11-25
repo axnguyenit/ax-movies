@@ -54,10 +54,10 @@ const Overview = (props) => {
                     overview.release_date ||
                     overview.air_date}
             </div>
-            <div className="block space-x-3 py-2">
+            <div className="flex py-2 flex-wrap">
                 {overview.genres &&
                     overview.genres.map((item) => (
-                        <span className="px-3 py-2 rounded-3xl border-2 border-gray-300 cursor-pointer hover:text-gray-400 hover:border-gray-400 duration-300">
+                        <span className="px-3 py-2 rounded-3xl border-2 border-gray-300 cursor-pointer hover:text-gray-400 hover:border-gray-400 duration-300 whitespace-nowrap mb-3 mr-3">
                             {item.name}
                         </span>
                     ))}
