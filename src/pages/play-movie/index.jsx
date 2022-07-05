@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 // components
 import Page from '../../components/page';
 import Video from '../../components/video';
@@ -15,13 +15,14 @@ import { handleScrollToTop } from '../../utils';
 
 export default function PlayMovie() {
   const { category, id } = useParams();
-  const otherRef = useRef<HTMLDivElement>(null);
-  const [background, setBackground] = useState<string>('');
-  const [src, setSrc] = useState<string>('');
-  const [seasons, setSeasons] = useState([]);
+  const otherRef = useRef(null);
+  const [src, setSrc] = useState('');
   const [title, setTitle] = useState([]);
+  const [seasons, setSeasons] = useState([]);
   const [overview, setOverview] = useState({});
-  const [preloader, setPreloader] = useState<boolean>(true);
+  const [preloader, setPreloader] = useState(true);
+  const [background, setBackground] = useState('');
+  const [, setSearchParams] = useSearchParams();
 
   const fetchMovie = async () => {
     try {
@@ -49,16 +50,12 @@ export default function PlayMovie() {
   };
 
   const handleUrl = (season = 1, episode = overview) => {
-    setPreloader(true);
-    if (category === 'movie') {
-      setSrc(embedMovie(id));
-    } else {
-      setOverview(episode);
-      if (episode.episode_number)
-        setSrc(embedEpisode(id, season, episode.episode_number));
-      else setSrc(embedEpisode(id, season, 1));
-    }
-    setPreloader(false);
+    if (category === 'movie') return setSrc(embedMovie(id));
+
+    setOverview(episode);
+    setSrc(embedEpisode(id, season, episode.episode_number ? episode.episode_number : 1));
+    setSearchParams({ season, episode: episode.episode_number || 1 });
+
     handleScrollToTop();
   };
 
